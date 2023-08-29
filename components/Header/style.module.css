@@ -1,0 +1,65 @@
+.container {
+    height: 90vh;
+    padding: 3vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: url("/images/maos-1.png") no-repeat right,
+                url("/images/pattern-1.png") no-repeat right;
+                
+    /* background-repeat: no-repeat;
+    background-position: right; */
+}
+
+.container section {
+    margin: 4vh 0;
+}
+
+.logo {
+    font-size: 10vh;
+    margin-bottom: 0;
+}
+
+.container h2 {
+    font-size: 5vh;
+    width: 60%;
+    font-weight: 600;
+}
+
+.container p {
+    font-size: 3vh;
+    width: 60%;
+    font-weight: 300;
+}
+
+.container .icons {
+    display: flex;
+    width: 50%;
+    height: 10vh;
+}
+
+.container .icons .icon{
+    display: flex;
+}
+
+.container .icons .icon p{
+    margin-left: 1vw;
+}
+
+.container .icons .icon .iconSquare{
+    width: 10vh;
+    width: 10vh;
+    background-color: rgba(255, 255, 255, 0.034);
+    border-radius: 2vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .icons .icon *{
+    color: white;
+
+}

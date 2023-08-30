@@ -6,7 +6,10 @@
 
 body {
     background-color: rgb(31, 31, 31);
-    /* overflow: hidden;  */
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    /* scroll-snap-type: y mandatory; */
 }
 
 h1,h2,h3,h4,h5,h6,p,span{
@@ -25,4 +28,11 @@ h1,h2,h3,h4,h5,h6,p,span{
 ::-webkit-scrollbar-thumb {
     background: #88888831;
     border-radius: 5px;
+
+}
+
+section {
+    /* overflow-y: scroll; */
+    /* scroll-snap-align: start; */
+    
 }

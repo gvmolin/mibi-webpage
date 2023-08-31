@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 7vh;
+    margin-top: 3vh;
 
     color: white;
 }
@@ -30,10 +30,92 @@
 .sectionTwo{
     /* background-color: aliceblue; */
     height: 30vh;
+    margin-top: 15vh;
+}
+
+.sectionTwo hr {
+    /* width: 100vw; */
+    background-color: yellow;
+    height: 1px;
+    border: none;
 }
 
 .stepsContainer {
     /* background-color: red; */
     /* height: 10vh; */
-    margin-top: 30vh;
+    position: relative;
+    
+    display: flex;
+    justify-content: space-between;
 }
+
+.stepsAbsolute{
+    position: absolute;
+	top: -1vw;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.stepCircle{
+	/* background-color: yellow; */
+	width: 2vw;
+	height: 2vw;
+    border-radius:100%;
+    /* box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.555);     */
+}
+
+.step:nth-child(2n+1) .stepCircle {
+	background-color: yellow;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.555);    
+}
+
+.step:nth-child(2n) .stepCircle {
+	background-color: green;
+    box-shadow: 0 0 20px 5px rgba(0, 128, 0, 0.555);    
+}
+
+.step{
+    width: 15%;
+    height: 50vh;
+    /* background-color: rgba(240, 248, 255, 0.26); */
+    display: flex;
+    justify-content: center;
+}
+
+.stepContent {
+    padding-top: 5vh;
+    position: absolute;
+    /* background-color: rgba(250, 235, 215, 0.171); */
+    /* width: 100%; */
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.stepContent h3 {
+    font-size: 3vh;
+    font-weight: 400;
+}
+
+.stepContent p {
+    font-size: 2.5vh;
+    font-weight: 100;
+    text-align: center;
+}
+
+.step:nth-child(2n+1) .stepContent h3 {
+	color: yellow;
+    /* box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.555);     */
+}
+
+.step:nth-child(2n) .stepContent h3{
+	color: green;
+    /* box-shadow: 0 0 20px 5px rgba(0, 128, 0, 0.555);     */
+}
+

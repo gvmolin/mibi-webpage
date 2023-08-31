@@ -1,0 +1,39 @@
+.container{
+    padding: 0 6vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.sectionOne {
+    width: 100;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7vh;
+
+    color: white;
+}
+
+.sectionOne h2 {
+    font-size: 6vh;
+}
+
+.sectionOne p {
+    width: 65%;
+    font-size: 4vh;
+}
+
+.sectionTwo{
+    /* background-color: aliceblue; */
+    height: 30vh;
+}
+
+.stepsContainer {
+    /* background-color: red; */
+    /* height: 10vh; */
+    margin-top: 30vh;
+}

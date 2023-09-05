@@ -18,9 +18,9 @@
     color: white;
 }
 
-.sectionOne h2 {
-    font-size: 6vh;
-}
+/* .sectionOne h2 { */
+    /* font-size: 6vh; */
+/* } */
 
 .sectionOne p {
     width: 65%;
@@ -35,7 +35,7 @@
 
 .sectionTwo hr {
     /* width: 100vw; */
-    background-color: yellow;
+    background-color: #D9C852;
     height: 1px;
     border: none;
 }
@@ -68,13 +68,13 @@
 }
 
 .step:nth-child(2n+1) .stepCircle {
-	background-color: yellow;
-    box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.555);    
+	background-color: #D9C852;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.200);    
 }
 
 .step:nth-child(2n) .stepCircle {
-	background-color: green;
-    box-shadow: 0 0 20px 5px rgba(0, 128, 0, 0.555);    
+	background-color: #046855;
+    box-shadow: 0 0 20px 5px rgba(0, 128, 0, 0.200);    
 }
 
 .step{
@@ -110,12 +110,12 @@
 }
 
 .step:nth-child(2n+1) .stepContent h3 {
-	color: yellow;
+	color: #D9C852;
     /* box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.555);     */
 }
 
 .step:nth-child(2n) .stepContent h3{
-	color: green;
+	color: #046855;
     /* box-shadow: 0 0 20px 5px rgba(0, 128, 0, 0.555);     */
 }
 

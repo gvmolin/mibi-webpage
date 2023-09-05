@@ -2,13 +2,16 @@ import RootLayout from '../layout';
 import HeaderComponent from '@/components/Header/header';
 import CardComponent from '@/components/Card/card';
 import ServicosComponent from '@/components/NossosServicos/servicos';
+import ParaQuemComponent from '@/components/ParaQuem/component';
 import styles from "./styles.module.css";
+import { readCarouselFiles } from "@/public/utils/utils";
+
 
 export default function TestePage() {
+  const carouselFiles = readCarouselFiles();
+
   return (
     <RootLayout>
-      
-      {/* <h1>hahahah</h1> */}
       <div className={styles.scrollSnapContainer}>
 
         <div className={styles.snapPoint}>
@@ -21,13 +24,9 @@ export default function TestePage() {
 
         <div className={styles.finalSnapPoint}>
           <ServicosComponent></ServicosComponent>
+          <ParaQuemComponent files={carouselFiles}></ParaQuemComponent>
           <div style={{height:"200vh"}}></div>
         </div>
-
-
-        
-        
-
       </div>
     </RootLayout>
     

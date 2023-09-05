@@ -1,0 +1,50 @@
+.container {
+    margin-top: 20vh;
+    padding: 0 6vw;
+
+    background: url("/images/fumaca-2.png") no-repeat center;
+                /* url("/images/fumaca-3.png") no-repeat right center; */
+    height: 200vh;
+}
+
+.cardsContainer {
+    margin-top: 3vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+
+.card{
+    width: 25%;
+    height: 40vh;
+    border-radius: 2vh;
+    background-color: rgb(25, 25, 25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+}
+
+.card p {
+    width: 50%;
+    padding-top: 2vh;
+    text-align: center;
+    font-weight: 200;
+}
+
+.swipeContainer {
+    margin-top: 10vh;
+    /* padding-top: 2vh; */
+}
+
+.swiper {
+    margin-top: 2vh;
+    background-color: red;
+}
+
+.swiper img {
+    width: 27vw;
+}

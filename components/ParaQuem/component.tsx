@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Controller } from "swiper/modules";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Thumbs } from 'swiper/modules';
 
 export default function ParaQuemComponent(
@@ -13,7 +13,6 @@ export default function ParaQuemComponent(
 		files:string[]
 	}
 ) {
-
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 	const cards: {
 		title: string,
@@ -33,6 +32,16 @@ export default function ParaQuemComponent(
 			},
 		]
 
+	useEffect(()=>{
+		console.log(props.files.sort((a:string, b:string) => filenameToNumber(a) -  filenameToNumber(b)))
+	}, [])
+
+	function filenameToNumber(str:string):number{
+		const splitted = str.split(".")
+		return parseInt(splitted[0])
+	}
+
+	
 	return (
 		<div className={styles.container}>
 			<GradientLineComponent />
@@ -41,7 +50,7 @@ export default function ParaQuemComponent(
 			<div className={styles.cardsContainer}>
 				{
 					cards.map((card, i) => (
-						<div className={styles.card} key={i}>
+						<div className={styles.card} key={i*17}>
 							<h1>{card.title}</h1>
 							<p>{card.text}</p>
 						</div>
@@ -59,14 +68,16 @@ export default function ParaQuemComponent(
 					className={styles.swiper}
 					spaceBetween={50}
 					slidesPerView={3}
-					onSlideChange={() => console.log('slide change')}
+					onSlideChange={(e) => console.log(e)}
 					onSwiper={(swiper) => console.log(swiper)}
 				>
 
 					{
-						props.files.map(file => (
-							<SwiperSlide><img src={'/images/carousel/' + file} /></SwiperSlide>
-						))
+						props.files
+							.sort((a:string, b:string) => filenameToNumber(a) -  filenameToNumber(b))
+							.map((file, i) => (
+								<SwiperSlide key={i*19}><img src={'/images/carousel/' + file} /></SwiperSlide>
+							))
 					}
 
 				</Swiper>

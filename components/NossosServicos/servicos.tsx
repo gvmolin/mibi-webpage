@@ -45,8 +45,8 @@ export default function ServicosComponent (){
                 <div className={styles.stepsContainer}>
                     <div className={styles.stepsAbsolute}>
                         {
-                            steps.map(step => (
-                                <div className={styles.step}>
+                            steps.map((step, i) => (
+                                <div className={styles.step} key={i*13}>
                                     <div className={styles.stepCircle} />
                                     <div className={styles.stepContent}>
                                         <h3>{step.title}</h3>

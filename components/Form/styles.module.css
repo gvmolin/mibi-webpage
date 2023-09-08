@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    border-radius: 1vh;
+
+    display: flex;
+    justify-content: center;
+    padding: 2vh 0;
+    
+}
+
+.container h1{
+    margin-bottom: 3vh;
+}
+
+.container .innerContainer{
+    width: 95%;
+}
+
+.container .formItem{
+    margin-bottom: 2vh;
+}
+
+.container .formItem input{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.363);
+    border: none;
+    border-radius: 3px;
+    height: 5vh;
+    
+}
+
+.container .formItem input:focus{
+    border: none;
+    outline: none;
+
+}
+
+.container .description input{
+    height: 15vh;
+}

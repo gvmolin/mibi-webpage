@@ -47,3 +47,9 @@
 .swiper img {
     width: 27vw;
 }
+
+.formContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

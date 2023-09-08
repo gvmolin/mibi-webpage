@@ -3,38 +3,35 @@
 import GradientLineComponent from "../Details/gradientline";
 import styles from "./styles.module.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from "swiper/modules";
+import { Form } from "../Form/component";
+
 import 'swiper/css';
-import { Controller } from "swiper/modules";
-import { useState, useEffect } from "react";
-import { Thumbs } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function ParaQuemComponent(
 	props:{
 		files:string[]
 	}
 ) {
-	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 	const cards: {
 		title: string,
 		text: string
 	}[] = [
-			{
-				title: "Empresas",
-				text: "Empresas que querem aumentar suas vendas, visibilidade e engajamento na internet."
-			},
-			{
-				title: "Empreendedores",
-				text: "Empresários que visam escalar suas vendas e se destacar no mercado digital."
-			},
-			{
-				title: "Influencers",
-				text: "Influenciadores digitais que desejam aumentar sua presença digital."
-			},
-		]
-
-	useEffect(()=>{
-		console.log(props.files.sort((a:string, b:string) => filenameToNumber(a) -  filenameToNumber(b)))
-	}, [])
+		{
+			title: "Empresas",
+			text: "Empresas que querem aumentar suas vendas, visibilidade e engajamento na internet."
+		},
+		{
+			title: "Empreendedores",
+			text: "Empresários que visam escalar suas vendas e se destacar no mercado digital."
+		},
+		{
+			title: "Influencers",
+			text: "Influenciadores digitais que desejam aumentar sua presença digital."
+		},
+	]
 
 	function filenameToNumber(str:string):number{
 		const splitted = str.split(".")
@@ -59,17 +56,15 @@ export default function ParaQuemComponent(
 			</div>
 			
 			<div className={styles.swipeContainer}>
+				<GradientLineComponent />
 				<h1>Portifolio</h1>
 				<Swiper
-					modules={[Thumbs]}
-					thumbs={{ swiper: thumbsSwiper }}
-
-					// controller={{ control: controlledSwiper }}
+					modules={[Navigation, Pagination]}
+					navigation
+					pagination={{ clickable: true }}
 					className={styles.swiper}
 					spaceBetween={50}
 					slidesPerView={3}
-					onSlideChange={(e) => console.log(e)}
-					onSwiper={(swiper) => console.log(swiper)}
 				>
 
 					{
@@ -81,11 +76,17 @@ export default function ParaQuemComponent(
 					}
 
 				</Swiper>
+			</div>
+				
+			<div style={{marginTop:"10vh"}}>
+				<GradientLineComponent />
+				<h1>Entre em contato</h1>
+				<div className={styles.formContainer}>
+
+					<Form />
+				</div>
 
 			</div>
-
-
-
 
 		</div>
 	);

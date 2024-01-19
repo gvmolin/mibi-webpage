@@ -51,5 +51,20 @@
 .formContainer {
     width: 100%;
     display: flex;
-    justify-content: center;
+    margin-top: 2vh;
+    justify-content: space-between;
+}
+
+.formText {
+    width: 45%;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    font-weight: 200;
+}
+
+.formText p {
+    font-size: 4vh;
 }

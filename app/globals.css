@@ -18,6 +18,10 @@ h1,h2,h3,h4,h5,h6,p,span{
     font-family: 'Poppins', sans-serif;
 }
 
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -32,11 +36,6 @@ h1,h2,h3,h4,h5,h6,p,span{
 
 }
 
-section {
-    /* overflow-y: scroll; */
-    /* scroll-snap-align: start; */
-    
-}
 
 h2 {
     font-size: 6vh;

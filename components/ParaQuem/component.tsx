@@ -82,8 +82,11 @@ export default function ParaQuemComponent(
 				<GradientLineComponent />
 				<h1>Entre em contato</h1>
 				<div className={styles.formContainer}>
-
 					<Form />
+
+					<div className={styles.formText}>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
 				</div>
 
 			</div>

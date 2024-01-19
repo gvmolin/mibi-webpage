@@ -64,11 +64,11 @@ export function Form() {
 
                 <div className={styles.buttonContainer}>
                     <button>Comece agora!</button>
-                </div>
-                
+                </div>   
+               
             </div>
 
-
+            
 
         </div>
     )

@@ -5,6 +5,8 @@ import ServicosComponent from '@/components/NossosServicos/servicos';
 import ParaQuemComponent from '@/components/ParaQuem/component';
 import styles from "./styles.module.css";
 import { readCarouselFiles } from "@/public/utils/utils";
+import Fluid from "@/components/Fluid/component"
+
 
 
 export default function TestePage() {
@@ -22,11 +24,21 @@ export default function TestePage() {
           <CardComponent></CardComponent>
         </div>
 
-        <div className={styles.finalSnapPoint}>
+        <div className={styles.snapPoint}>
           <ServicosComponent></ServicosComponent>
-          <ParaQuemComponent files={carouselFiles}></ParaQuemComponent>
-          <div style={{height:"200vh"}}></div>
+          
         </div>
+
+        <footer className={styles.finalSnapPoint}>
+          <ParaQuemComponent files={carouselFiles}></ParaQuemComponent>
+          <div style={{height:"30vh"}}></div>
+          <div style={{background: "rgb(25, 25, 25)", height:"40vh", borderRadius:"2vh", display: "flex", alignItems: "flex-end"}}>
+            
+            <Fluid style={{width:"100%", height:"20vh", borderRadius:"2vh 2vh 0 0"}}></Fluid>
+
+          </div>
+        </footer>
+        
       </div>
     </RootLayout>
     

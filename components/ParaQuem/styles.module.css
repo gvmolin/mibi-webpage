@@ -19,7 +19,7 @@
 .card{
     width: 25%;
     height: 40vh;
-    border-radius: 2vh;
+    border-radius: 1vh;
     background-color: rgb(25, 25, 25);
 
     display: flex;

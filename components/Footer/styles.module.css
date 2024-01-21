@@ -1,0 +1,19 @@
+.container {
+    background: rgb(25, 25, 25);
+    height:40vh;
+    border-radius:2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+    .innerContainer{
+        padding: 2vh 6vw;
+        display: flex;
+        justify-content: space-between;
+
+        .icons{
+            font-size: 2vh;
+        }
+    }
+}

@@ -5,6 +5,9 @@ import styles from "./styles.module.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from "swiper/modules";
 import { Form } from "../Form/component";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { faBuilding, faPerson, faPalette } from "@fortawesome/free-solid-svg-icons";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,19 +20,23 @@ export default function ParaQuemComponent(
 ) {
 	const cards: {
 		title: string,
-		text: string
+		text: string,
+		icon: IconProp,
 	}[] = [
 		{
 			title: "Empresas",
-			text: "Empresas que querem aumentar suas vendas, visibilidade e engajamento na internet."
+			text: "Empresas que querem aumentar suas vendas, visibilidade e engajamento na internet.",
+			icon: faBuilding as IconProp,
 		},
 		{
 			title: "Empreendedores",
-			text: "Empresários que visam escalar suas vendas e se destacar no mercado digital."
+			text: "Empresários que visam escalar suas vendas e se destacar no mercado digital.",
+			icon: faPerson as IconProp,
 		},
 		{
 			title: "Influencers",
-			text: "Influenciadores digitais que desejam aumentar sua presença digital."
+			text: "Influenciadores digitais que desejam aumentar sua presença digital.",
+			icon: faPalette as IconProp,
 		},
 	]
 
@@ -48,6 +55,7 @@ export default function ParaQuemComponent(
 				{
 					cards.map((card, i) => (
 						<div className={styles.card} key={i*17}>
+							<p style={{fontSize:"5vh"}}><FontAwesomeIcon icon={card.icon}></FontAwesomeIcon></p>
 							<h1>{card.title}</h1>
 							<p>{card.text}</p>
 						</div>
